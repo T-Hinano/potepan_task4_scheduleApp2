@@ -17,11 +17,11 @@
   <table class="Table table table-bordered DetailTable">
     <tr>
       <th>開始日</th>
-      <td><%= @appoint.start_date %></td>
+      <td><%= @appoint.start_date.to_s(:date) %></td>
     </tr>
     <tr>
       <th>終了日</th>
-      <td><%= @appoint.end_date %></td>
+      <td><%= @appoint.end_date.to_s(:date) %></td>
     </tr>
     <tr>
       <th>終日</th>
