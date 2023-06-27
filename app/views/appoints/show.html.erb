@@ -1,0 +1,43 @@
+<div class="container">
+<div class="formContainer">
+<div>
+    <%= link_to "一覧に戻る", :appoints %>
+</div>
+
+<div class="pageTitle">
+  <h3><%= @appoint.title %></h3>
+  
+  <p class="pageTitle_button">
+    <%= link_to "編集", [:edit, @appoint] %>
+  </p>
+</div>
+
+<div class="formContainer_value">
+  
+  <table class="Table table table-bordered DetailTable">
+    <tr>
+      <th>開始日</th>
+      <td><%= @appoint.start_date %></td>
+    </tr>
+    <tr>
+      <th>終了日</th>
+      <td><%= @appoint.end_date %></td>
+    </tr>
+    <tr>
+      <th>終日</th>
+      <% if @appoint.all_day_flag == true then %>
+        <td>○</td>
+      <% else %>
+        <td>　</td>
+      <% end %>
+    </tr>
+    <tr>
+      <th>メモ</th>
+      <td><%= @appoint.memo %></td>
+    </tr>
+  </table>
+
+</div>
+
+</div>
+</div>

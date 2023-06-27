@@ -1,0 +1,40 @@
+<div class="container">
+<div class="formContainer">
+<h3>予定の新規作成</h3>
+
+<div class="formContainer_value">
+  
+<%= form_with model: @appoint do |f| %>
+  <div class="formCategory">
+    <%= f.label :title ,"タイトル" %>
+    <%= f.text_field :title %>
+  </div>
+  
+  <div class="formCategory_date">
+    <div class="formCategory formRow">
+      <%= f.label :start_date ,"開始日" %>
+      <%= f.datetime_field :start_date %>
+    </div>
+    <div class="formCategory formRow">
+      <%= f.label :end_date ,"終了日" %>
+      <%= f.datetime_field :end_date %>
+    </div>
+  </div>
+
+  <%= f.check_box :all_day_flag %>
+  <%= f.label :all_day_flag ,"終日の場合はチェックを入れます" %>
+  
+  <div class="formCategory">
+    <%= f.label :memo ,"メモ" %>
+    <%= f.text_area :memo %>
+  </div>
+  
+  <div class="formButtonValue">
+      <%= link_to "キャンセル", :appoints %>
+      <%= f.submit "保存"%>
+  </div>
+<% end %>
+</div>
+
+</div>
+</div>

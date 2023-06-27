@@ -1,0 +1,156 @@
+// Place all the styles related to the schedule controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background-color: rgb(246, 246, 246);
+  color: rgb(51, 51, 51);
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, 游ゴシック体, "ヒラギノ角ゴ Pro W3", メイリオ, sans-serif;
+}
+
+footer {
+    max-width: 980px;
+  width: 100%;
+  padding-right: var(--bs-gutter-x,.75rem);
+  padding-left: var(--bs-gutter-x,.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.pageTitle_button a{
+  color: white;
+  background-color: #2962ff;
+  padding: 15px 20px 15px 20px;
+  text-decoration: none;
+}
+
+.formCancelButton a{
+  color: white;
+  background-color: #2962ff;
+  padding: 15px 20px 15px 20px;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 980px;
+  width: 100%;
+  padding-right: var(--bs-gutter-x,.75rem);
+  padding-left: var(--bs-gutter-x,.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.formContainer {
+  height: fit-content;
+  margin: auto;
+  width: 640px;
+}
+
+.formContainer_value {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 1px rgba(0,0,0,.02), 0 1px 3px rgba(50,50,93,.15);
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 18px auto 0;
+  padding: 24px;
+}
+
+.formCategory {
+  display: flex;
+  flex-direction: column;
+}
+
+.formCategory_date{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.formRow {
+  width: 50%;
+  
+}
+
+.pageTitle {
+  align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.pageTitle_text {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.Table {
+  background-color: #fff;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 0;
+}
+
+.Table th {
+  border-color: #e0e0e0!important;
+  padding: 10px 16px;
+}
+.Table td {
+  padding: 20px 16px;
+}
+
+.table {
+  --bs-table-bg: transparent;
+  --bs-table-accent-bg: transparent;
+  --bs-table-striped-color: #212529;
+  --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+  --bs-table-active-color: #212529;
+  --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+  --bs-table-hover-color: #212529;
+  --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  vertical-align: top;
+  border-color: #dee2e6;
+}
+
+.DetailTable {
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+tbody, td, tfoot, th, thead, tr {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+
+.formButtonValue {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.footer {
+  align-items: baseline;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 0 1px rgba(0,0,0,.02), 0 1px 3px rgba(50,50,93,.15);
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+}
+
+.footer_text {
+  font-size: 16px;
+  line-height: 26px;
+}
+.footer_text > span{
+  font-family: Lato,sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-right: 4px;
+}
