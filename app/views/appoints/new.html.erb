@@ -2,9 +2,10 @@
 <div class="formContainer">
 <h3>予定の新規作成</h3>
 
+<%= render "shared/error", obj: @appoint %>
+
 <div class="formContainer_value">
-  
-<%= form_with model: @appoint do |f| %>
+<%= form_with model: @appoint, local: true do |f| %>
   <div class="formCategory">
     <%= f.label :title ,"タイトル" %>
     <%= f.text_field :title %>

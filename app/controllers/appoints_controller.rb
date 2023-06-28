@@ -15,7 +15,7 @@ class AppointsController < ApplicationController
       flash[:notice] = "スケジュールを登録しました"
       redirect_to :appoints
     else
-      render "new"
+      render "new", status: :unprocessable_entity
     end
   end
   
