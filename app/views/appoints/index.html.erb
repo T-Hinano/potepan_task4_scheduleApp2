@@ -1,0 +1,65 @@
+  <div class="container">
+    
+  
+  <% if flash[:notice] %>
+    <p class="notice"><%= flash[:notice] %></p>
+  <% end %>
+  
+  <div class="pageTitle">
+    <h2 class="pageTitle_text">予約一覧</h2>
+    <p class="pageTitle_button">
+      <%= link_to "+ 新規追加", "/appoints/new" %>
+    </p>
+  </div>
+  
+  <table class="table Table"> 
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>タイトル</th>
+        <th>開始日</th>
+        <th>終了日</th>
+        <th>終日</th>
+        <th>更新日</th>
+        <th>詳細</th>
+        <th>編集</th>
+        <th>削除</th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <% @appoints.each do |appoint| %>
+      <tr>
+        <td><%= appoint.id %></td>
+        <td><%= appoint.title %></td>
+        <td><%= appoint.start_date.to_s(:date) %></td>
+        <td><%= appoint.end_date.to_s(:date) %></td>
+        <% if appoint.all_day_flag == true then %>
+          <td>○</td>
+        <% else %>
+          <td>　</td>
+        <% end %>
+        <td><%= appoint.updated_at.to_s(:datetime) %></td>
+        <td>
+          <%= link_to "詳細", appoint %>
+        </td>
+        <td>
+          <%= link_to "編集", [:edit, appoint] %>
+        </td>
+        <td>
+          <%= link_to "削除", appoint, method: :delete, data: { confirm: "本当に削除しますか？" } %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  
+  <div class="footer">
+    <p class="footer_text">
+      予定合計<span><%= @appointsCount %></span>件
+    </p>
+    <p class="footer_datetime">
+      本日の日付 <%= @date %>
+    </p>
+  </div>
+  </div>
