@@ -2,7 +2,9 @@
 <div class="formContainer">
 <h3>予定の新規作成</h3>
 
-<%= render "shared/error", obj: @appoint %>
+<div class="errorContainer">
+  <%= render "shared/error", obj: @appoint %>
+</div>
 
 <div class="formContainer_value">
 <%= form_with model: @appoint, local: true do |f| %>
